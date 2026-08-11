@@ -58,6 +58,10 @@
     <Compile Include="Generics\Utilities.cs" />
     <Compile Include="LambdaExpression\BookRepository.cs" />
     <Compile Include="LambdaExpression\LambdaExpression.cs" />
+    <Compile Include="LINQ\Book.cs" />
+    <Compile Include="LINQ\BookRepository.cs" />
+    <Compile Include="LINQ\LINQJOin.cs" />
+    <Compile Include="LINQ\LinqDemoFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
