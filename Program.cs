@@ -1,4 +1,5 @@
-﻿using CsharpAdvance.Generics;
+﻿using CsharpAdvance.Delegates;
+using CsharpAdvance.Generics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,20 @@ namespace CsharpAdvance
     {
         static void Main(string[] args)
         {
-           var number=new Generics.Nullable<int>();
-            Console.WriteLine("Has value ?" + number.HasValue);
-            Console.WriteLine("Value:"+number.GetValueOrDefault());
+            var processor = new PhotoProcessor();
+            var filters = new PhotoFilters();
+
+           // PhotoFilterHandler filterHandler = filters.ApplyBrightness;
+            Action<Photo> filterHandler = filters.ApplyBrightness;
+            filterHandler += filters.ApplyContrast;
+            filterHandler += RemoveRedEye;
+
+            processor.Process("photo.jpg",filterHandler);
+        }
+
+        static void RemoveRedEye(Photo photo)
+        {
+            Console.WriteLine("Applied RemoveRedEye");
         }
     }
 
