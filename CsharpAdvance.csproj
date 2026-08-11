@@ -50,6 +50,7 @@
     <Compile Include="Events\MessageService.cs" />
     <Compile Include="Events\Video.cs" />
     <Compile Include="Events\VideoEncoder.cs" />
+    <Compile Include="ExtenstionMethod\StringExtension.cs" />
     <Compile Include="Generics\BookList.cs" />
     <Compile Include="Generics\DiscountCalculator.cs" />
     <Compile Include="Generics\List.cs" />
